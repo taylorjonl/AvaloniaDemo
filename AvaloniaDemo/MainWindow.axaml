@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pages="clr-namespace:AvaloniaDemo.Pages"
+        xmlns:pageModels="clr-namespace:AvaloniaDemo.ViewModels.Pages;assembly=AvaloniaDemo.ViewModels"
+        xmlns:viewModels="clr-namespace:AvaloniaDemo.ViewModels;assembly=AvaloniaDemo.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaDemo.Pages.MainWindow"
+        x:DataType="viewModels:MainWindowModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaDemo">
+    <Window.DataTemplates>
+        <DataTemplate DataType="pageModels:GreetingPageModel">
+          <pages:GreetingPage/>
+        </DataTemplate>
+    </Window.DataTemplates>
+
+    <ContentControl Content="{Binding Content}"/>
+
+</Window>
